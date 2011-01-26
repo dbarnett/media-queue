@@ -10,7 +10,7 @@ def main(argv=None):
     parser.add_option('-a', '--asin', dest='asin')
     (options, args) = parser.parse_args(argv[1:])
     if options.asin is not None:
-        webbrowser.get('firefox').open('http://www.amazon.com/gp/product/'+options.asin)
+        webbrowser.open('http://www.amazon.com/gp/product/'+options.asin)
     else:
         parser.error('Please supply an ASIN with --asin')
 
